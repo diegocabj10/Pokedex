@@ -1,0 +1,21 @@
+<div class="content" role="main">
+
+  <!-- Highlight Card -->
+  <div class="card highlight-card">
+    <h1>{{ 'TITLE' | translate }}</h1>
+  </div>
+
+  <h2>{{ 'SUBTITLE' | translate }}</h2>
+  <p>{{ 'DESCRIPTION' | translate }}</p>
+
+  <div class="card-container">
+    <a class="card" *ngFor="let pokemon of pokemons | paginate: { itemsPerPage: 6, currentPage: pages }">
+      <img width="24" height="24" src={{pokemon.source}}>
+      <span>{{pokemon.name}}</span>
+    </a>
+
+  </div>
+  <div>
+    <pagination-controls (pageChange)="pages = $event"></pagination-controls>
+  </div>
+</div>
