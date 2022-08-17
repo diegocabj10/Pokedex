@@ -16,6 +16,6 @@
 
   </div>
   <div>
-    <pagination-controls (pageChange)="pages = $event"></pagination-controls>
+    <pagination-controls [maxSize]="5" (pageChange)="pages = $event"></pagination-controls>
   </div>
 </div>

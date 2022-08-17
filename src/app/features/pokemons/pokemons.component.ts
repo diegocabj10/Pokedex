@@ -45,9 +45,21 @@ export class PokemonsComponent implements OnInit {
       name: 'Pokemon 9',
       source: 'assets/svg/pokemon.svg',
     },
+    {
+      name: 'Pokemon 10',
+      source: 'assets/svg/pokemon.svg',
+    },
+    {
+      name: 'Pokemon 11',
+      source: 'assets/svg/pokemon.svg',
+    },
+    {
+      name: 'Pokemon 12',
+      source: 'assets/svg/pokemon.svg',
+    },
   ];
   constructor(private translateService: TranslateService,) {}
-
+//https://www.bezkoder.com/ngx-pagination-angular-8/
   ngOnInit(): void {
     this.translateService.use('AR');
   }

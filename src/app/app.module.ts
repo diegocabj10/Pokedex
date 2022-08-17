@@ -9,6 +9,7 @@ import {
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { fakeBackendProvider } from './core/fake-backend/fake-backend.interceptor';
 import { createTranslateLoader } from './core/translator/create-translate-loader';
 import { CustomMissingTranslationHandler } from './core/translator/missing-translation-handler';
 import { SharedModule } from './shared/shared.module';
@@ -30,9 +31,12 @@ import { SharedModule } from './shared/shared.module';
         useClass: CustomMissingTranslationHandler,
       },
     }),
-    HttpClientModule
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    // provider used to create fake backend
+    fakeBackendProvider,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
